@@ -1,4 +1,4 @@
-# Dashboard Ticket-Flow-Analytics — Power BI
+# 📊 Dashboard Ticket-Flow-Analytics — Power BI
 
 ## Descrição do Projeto
 
@@ -8,7 +8,7 @@ A solução foi construída utilizando modelagem dimensional (Star Schema), medi
 
 ---
 
-# Objetivos da Análise
+# 🎯 Objetivos da Análise
 
 O projeto foi desenvolvido com os seguintes objetivos:
 
@@ -21,7 +21,7 @@ O projeto foi desenvolvido com os seguintes objetivos:
 
 ---
 
-# Perguntas de Negócio Respondidas
+# ❓ Perguntas de Negócio Respondidas
 
 O dashboard permite responder perguntas como:
 
@@ -36,7 +36,7 @@ O dashboard permite responder perguntas como:
 
 ---
 
-# Principais Insights
+# 🔍 Principais Insights
 
 Durante a análise foi possível identificar:
 
@@ -50,18 +50,17 @@ Durante a análise foi possível identificar:
 
 ---
 
-# Ferramentas Utilizadas
+# 🛠️ Ferramentas Utilizadas
 
-* Power BI
-* Power Query
-* DAX
-* Excel
+* Power BI (Visualização e criação de dashboards interativos)
+* Power Query (Tratamento, limpeza de dados, remoção de nulos e transformação de categorias)
+* DAX (Cálculo de medidas, inteligência de tempo e variações)
+* Excel (Análise exploratória, tratamento de dados e apoio na modelagem)
 * HTML (menu lateral personalizado)
-* Modelagem Dimensional (Star Schema)
 
 ---
 
-# Principais Indicadores
+# 📈 Principais Indicadores
 
 ## KPIs Gerais
 
@@ -95,7 +94,7 @@ Durante a análise foi possível identificar:
 
 ---
 
-# Análises Desenvolvidas
+# 📊 Análises Desenvolvidas
 
 ## Visão Geral
 
@@ -148,23 +147,23 @@ Principais análises:
 
 ---
 
-# Estrutura do Projeto
+# 📁 Estrutura do Projeto
 
 ```text
 data/
 │
-├── base_chamados.xlsx
+├── Base_Suporte_Tecnico.xlsx
 │
 
 powerbi/
 │
-├── dashboard_chamados.pbix
+├── Ticket-Flow-Analytics.pbix
 │
 
 docs/
 │
-├── documentacao_projeto.pdf
-├── guia_usuario.pdf
+├── Documentacao_Projeto.pdf
+├── Guia_Usuario.pdf
 │
 
 README.md
@@ -172,7 +171,7 @@ README.md
 
 ---
 
-# Contexto
+# 📌 Contexto
 
 Este projeto foi desenvolvido com foco em análise de dados aplicada à gestão de chamados técnicos, utilizando boas práticas de modelagem dimensional, documentação analítica e construção de dashboards interativos.
 
@@ -182,7 +181,7 @@ O objetivo principal foi transformar dados operacionais em informações úteis 
 
 ---
 
-# Preview do Dashboard
+# 🖼️ Preview do Dashboard
 
 
 
