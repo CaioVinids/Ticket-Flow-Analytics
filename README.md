@@ -183,5 +183,4 @@ O objetivo principal foi transformar dados operacionais em informações úteis 
 
 # 🖼️ Preview do Dashboard
 
-
-
+![Visão Geral](docs/Visao_Geral.png)
