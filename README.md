@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este projeto consiste no desenvolvimento de um dashboard analítico de chamados técnicos utilizando Power BI, com foco no monitoramento operacional, análise executiva e identificação de tendências temporais.
+Dashboard interativo desenvolvido em Power BI para monitoramento e análise da Central de Chamados de TI. O projeto consolida dados do período de 2025 e oferece visões estratégicas, operacionais e temporais sobre o desempenho do suporte técnico, com foco em SLA, MTTR e produtividade da equipe.
 
 A solução foi construída utilizando modelagem dimensional (Star Schema), medidas DAX, dashboards interativos e um menu lateral customizado desenvolvido em HTML para melhorar a navegação entre páginas e proporcionar uma experiência de uso mais intuitiva.
 
@@ -12,12 +12,11 @@ A solução foi construída utilizando modelagem dimensional (Star Schema), medi
 
 O projeto foi desenvolvido com os seguintes objetivos:
 
-* Monitorar indicadores operacionais da central de chamados
-* Avaliar conformidade de SLA
-* Acompanhar tempo médio de resolução (MTTR)
-* Identificar gargalos operacionais
-* Avaliar produtividade técnica
-* Identificar padrões temporais e sazonalidade operacional
+* Monitorar a conformidade com os acordos de nível de serviço (SLA) por prioridade
+* Avaliar o desempenho individual e coletivo da equipe técnica
+* Identificar padrões de demanda por turno, dia da semana e mês
+* Apoiar a tomada de decisão estratégica com indicadores consolidados
+* Mapear gargalos operacionais por categoria, canal e departamento
 
 ---
 
@@ -25,14 +24,14 @@ O projeto foi desenvolvido com os seguintes objetivos:
 
 O dashboard permite responder perguntas como:
 
-* O SLA está sendo atendido?
-* Qual o volume atual de backlog?
-* Quais técnicos possuem melhor desempenho?
-* Quais períodos apresentam maior demanda?
-* Como o MTTR evolui ao longo do tempo?
-* Qual turno concentra maior volume operacional?
-* Quais categorias apresentam maior volume de chamados?
-* Como está distribuída a carga operacional da equipe?
+* Qual o percentual de chamados resolvidos dentro do prazo do SLA?
+* Em quais prioridades o SLA está mais crítico em relação à meta?
+* Qual técnico possui melhor desempenho em volume de resolução e SLA?
+* Existe diferença de MTTR entre técnicos Júnior, Pleno e Sênior?
+* Em qual turno e dia da semana a demanda de chamados é mais alta?
+* Quais categorias de chamado têm maior volume e pior conformidade de SLA?
+* Qual departamento gera mais chamados para o suporte técnico?
+* Qual a proporção de chamados nos fins de semana vs dias úteis?
 
 ---
 
@@ -40,23 +39,24 @@ O dashboard permite responder perguntas como:
 
 Durante a análise foi possível identificar:
 
-* Distribuição operacional por turnos
-* Tendências temporais de resolução
-* Concentração da demanda por períodos específicos
-* Impacto do backlog operacional
-* Diferenças de desempenho entre equipes e níveis técnicos
-* Variações de SLA conforme prioridade
-* Comportamento temporal da operação ao longo dos meses
+* SLA abaixo da meta em todas as prioridades, nenhuma prioridade atingiu a meta de 85%, com destaque para Baixa (57,1%) e Alta (64,7%)
+* Noite e Madrugada concentram mais chamados, os dois turnos respondem por mais de 50% do volume total, indicando necessidade de reforço fora do horário comercial
+* Segunda-feira é o dia de maior demanda, 67 chamados contra 50 nas quartas e terças, pico típico de início de semana
+* Dezembro registra o pior MTTR, 52,5h de média, contra 18,1h em setembro, possivelmente impactado por férias e redução de equipe
+* 71% dos chamados são resolvidos, mas o backlog ativo de 77 chamados e 25 reaberturas indicam oportunidade de melhoria na qualidade
+* Sênior tem MTTR mais alto (32h) que Júnior (23,7h), sugerindo que recebem casos de maior complexidade
+* Backup/Dados é a categoria com maior volume (75 chamados) e melhor SLA (72,4%), enquanto E-mail tem o pior SLA (54,2%)
+* 28,5% dos chamados ocorrem no fim de semana, volume relevante para avaliar necessidade de plantão
 
 ---
 
 # 🛠️ Ferramentas Utilizadas
 
 * Power BI (Visualização e criação de dashboards interativos)
-* Power Query (Tratamento, limpeza de dados, remoção de nulos e transformação de categorias)
+* Power Query (Transformação e limpeza dos dados)
 * DAX (Cálculo de medidas, inteligência de tempo e variações)
 * Excel (Análise exploratória, tratamento de dados e apoio na modelagem)
-* HTML (menu lateral personalizado)
+* HTML + CSS (Menu lateral interativo via visual HTML Content)
 
 ---
 
@@ -69,9 +69,8 @@ Durante a análise foi possível identificar:
 * Chamados Abertos
 * Chamados Em Atendimento
 * Chamados Pendentes
-* Chamados Cancelados
 * Chamados Reabertos
-* Backlog Operacional
+* Chamados Backlog
 
 ## Indicadores Percentuais
 
@@ -81,8 +80,6 @@ Durante a análise foi possível identificar:
 * % Em Atendimento
 * % Pendentes
 * % Reabertos
-* % Backlog
-* % por Canal
 
 ## Indicadores de SLA e Performance
 
@@ -98,26 +95,22 @@ Durante a análise foi possível identificar:
 
 ## Visão Geral
 
-Apresenta indicadores consolidados e visão estratégica da operação.
+Apresenta indicadores consolidados e visão estratégica da operação com os 6 principais KPIs e 3 gráficos resumidos. Ponto de entrada para navegação pelo dashboard.
 
-Principais elementos:
-
-* KPIs principais
-* Indicadores consolidados
-* Visão geral da operação
+* Evolução Mensal;
+* Distribuição de SLA; 
+* Volume por Departamento.
 
 ---
 
 ## Análise Executiva
 
-Foco em indicadores estratégicos e desempenho geral da operação.
+Foco estratégico em SLA e qualidade com KPIs de percentual e gap para leitura executiva.
 
-Principais análises:
-
-* Tendência de SLA
-* Conformidade SLA por prioridade
-* Distribuição de chamados por status
-* Indicadores estratégicos de performance
+* Inclui Tendência de SLA vs Meta mensal;
+* Conformidade SLA por Prioridade;
+* Distribuição por Status;
+* Tabela de Volume e SLA por Categoria;
 
 ---
 
@@ -125,22 +118,17 @@ Principais análises:
 
 Foco em produtividade, eficiência e distribuição operacional.
 
-Principais análises:
-
-* Produtividade por técnico
-* Distribuição da carga operacional
-* Desempenho técnico
-* MTTR por senioridade
+* Tabela ranking de técnicos com Volume, Chamados Resolvidos e SLA %;  
+* Gráfico de Carga de Trabalho por Status e por técnico;
+* MTTR comparativo por nível de senioridade.
 
 ---
 
 ## Análise Temporal
 
-Foco em comportamento temporal e sazonalidade.
+Foco em comportamento temporal e sazonalidade. Base para decisões de escala e dimensionamento de equipe.
 
-Principais análises:
-
-* Chamados por turno
+* Distribuição por Turno
 * Chamados por dia da semana
 * Evolução temporal do MTTR
 * Comparativo entre dias úteis e finais de semana
@@ -173,9 +161,9 @@ README.md
 
 # 📌 Contexto
 
-Este projeto foi desenvolvido com foco em análise de dados aplicada à gestão de chamados técnicos, utilizando boas práticas de modelagem dimensional, documentação analítica e construção de dashboards interativos.
+Os dados utilizados neste projeto são fictícios, gerados para fins acadêmicos e de portfólio. A base simula o registro de chamados de uma Central de Suporte de TI ao longo de 2025, contendo informações sobre técnicos, categorias, canais, prioridades, status e tempos de atendimento.
 
-Além da construção analítica, também foram aplicados elementos de personalização visual, incluindo um menu lateral desenvolvido em HTML para melhorar a navegação e experiência do usuário.
+O modelo semântico foi construído seguindo o padrão estrela com uma tabela fato (Fato_Chamados), três dimensões (Dim_Calendario, Dim_Tecnicos, Dim_SLA_Config) e uma tabela auxiliar (Dim_Turno). As 21 medidas DAX foram organizadas em pastas de exibição e documentadas com comentários inline.
 
 O objetivo principal foi transformar dados operacionais em informações úteis para acompanhamento de desempenho e suporte à tomada de decisão.
 
